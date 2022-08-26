@@ -74,10 +74,6 @@ class BaseMapper:
         collection = self.db[table]
         return collection.find(query)
 
-    def insert_one(self, table, data):
-        collection = self.db[table]
-        collection.insert_one(data)
-
     def query_seedwords_byWord(self, word):
         """
         通过单词获取url与explanation is_read
@@ -106,6 +102,10 @@ class BaseMapper:
         """
         return self.contains_value(self.db.stop_words, 'words', word)
 
+    def insert_one(self, table, data):
+        collection = self.db[table]
+        collection.insert_one(data)
+    
     def insert_one_seedwords(self, data):
 
         """data为topK的数据,

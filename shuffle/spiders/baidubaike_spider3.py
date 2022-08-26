@@ -8,8 +8,6 @@ class BaidubaikeSpider3(scrapy.Spider):
     name = 'baiduspider3'
     allowed_domains = ['baike.baidu.com']
 
-    # df = pd.read_excel("D:/Git-Space/byte-dance/李津津/scrapy_project3.0/scrapy_project/spiders/种子词汇.xlsx")
-    # df["是否已读"] = 0
     baseMapper = BaseMapper.BaseMapper()
 
     #count = collection.count_documents({})

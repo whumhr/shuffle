@@ -46,7 +46,7 @@ class ScrapyProjectPipeline:
         elif len(explain) > 180:
             tags = jieba.analyse.extract_tags(explain, topK=20, withWeight=False)
         for j in tags:  # 判断分词是否在高频词里面
-            if self.baseMapper.query_count('seed_words') < 60 and not self.baseMapper.contains_value('seed_words',
+            if self.baseMapper.query_count('seed_words') < 200 and not self.baseMapper.contains_value('seed_words',
                                                                                                      'words',
                                                                                                      j) and self.baseMapper.contains_value(
                     'match_words', 'words', j) and not self.baseMapper.contains_value('stop_words', 'words',

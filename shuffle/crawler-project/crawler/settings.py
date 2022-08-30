@@ -89,3 +89,7 @@ ITEM_PIPELINES = {
 
 # Enable and configure DNS caching (disabled by default)
 DNSCACHE_ENABLE = True
+# 设置DNS内存缓存大小
+DNSCACHE_SIZE = 100
+# 以秒为单位处理DNS查询的超时
+DNS_TIMEOUT = 60
